@@ -1,13 +1,18 @@
+# Ignore raw data
 data/raw/
 data/processed/
 models/
 
+# Python cache
 __pycache__/
 *.pyc
 
+# Jupyter
 .ipynb_checkpoints/
 
+# Virtual env
 venv/
 .env
 
+# Mac
 .DS_Store
