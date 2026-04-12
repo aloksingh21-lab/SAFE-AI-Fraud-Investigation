@@ -14,13 +14,15 @@ df = pd.read_csv(data_path, index_col=0)
 # Create display options
 df["case_label"] = (
     "Case " + df.index.astype(str) +
-    " | Severity: " + df["severity"].astype(str) +
-    " | Actual Class: " + df["actual_class"].astype(str)
+    " |  Actual: " + df["actual_class"].astype(str) +
+    " |  Severity: " + df["severity"].astype(str)
 )
 
 selected_case = st.selectbox("Selet a transaction case", df["case_label"])
 
 selected_row = df[df["case_label"] == selected_case].iloc[0]
+
+st.markdown("---")
 
 st.subheader("Transaction Overview")
 
@@ -39,6 +41,33 @@ with col3:
     st.metric("Hour", int(selected_row["Hour"]))
 
 st.markdown("---")
+
+st.subheader("Severity Assessment")
+if selected_row["severity"] == "Critical":
+    st.error(f"Severity: {selected_row['severity']}")
+elif selected_row["severity"] == "High":
+    st.warning(f"Severity: {selected_row['severity']}")
+elif selected_row["severity"] == "Medium":
+    st.info(f"Severity: {selected_row['severity']}")
+else:
+    st.success(f"Severity: {selected_row['severity']}")
+
+st.markdown("---")
+
+st.subheader("Explanation")
+st.write(selected_row["explanation_text"])
+
+st.markdown("---")
+
+st.subheader("Recommended Action")
+st.write(selected_row["recommended_action"])
+
+st.markdown("---")
+
+st.subheader("GPT InvestigationSummary")
+st.write(selected_row["gpt_summary"])
+
+st.markdown("---")
 st.subheader("Model Check")
 
 with st.expander("Demo Validation (for presentation only)"):
@@ -52,22 +81,3 @@ with st.expander("Demo Validation (for presentation only)"):
 
     with col5:
         st.metric("Prediction Match", match_status)
-
-st.subheader("Severity Assessment")
-if selected_row["severity"] == "Critical":
-    st.error(f"Severity: {selected_row['severity']}")
-elif selected_row["severity"] == "High":
-    st.warning(f"Severity: {selected_row['severity']}")
-elif selected_row["severity"] == "Medium":
-    st.info(f"Severity: {selected_row['severity']}")
-else:
-    st.success(f"Severity: {selected_row['severity']}")
-
-st.subheader("Explanation")
-st.write(selected_row["explanation_text"])
-
-st.subheader("Recommended Action")
-st.write(selected_row["recommended_action"])
-
-st.subheader("GPT InvestigationSummary")
-st.write(selected_row["gpt_summary"])
