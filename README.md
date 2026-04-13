@@ -71,7 +71,7 @@ This project addresses that need by building a system that:
 
 ## Project Structure
 SAFE-AI-Fraud-Investigation/
-
+```
 ├── app/  
 │ └── streamlit_app.py  
 
@@ -97,6 +97,7 @@ SAFE-AI-Fraud-Investigation/
 ├── requirements.txt  
 ├── README.md  
 
+```
 ---
 
 ## How to Run the App
