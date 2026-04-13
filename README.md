@@ -65,7 +65,6 @@ This project addresses that need by building a system that:
 - Scikit-learn
 - Streamlit
 - OpenAI GPT
-- Joblib
 
 ---
 
