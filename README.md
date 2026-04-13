@@ -72,30 +72,30 @@ This project addresses that need by building a system that:
 ## Project Structure
 SAFE-AI-Fraud-Investigation/
 
-├── app/
-│ └── streamlit_app.py
+├── app/  
+│ └── streamlit_app.py  
 
-├── data/
-│ └── processed/
-│ ├── creditcard_processed.csv
-│ ├── test_results_with_explanations.csv
-│ ├── test_results_with_summaries.csv
+├── data/  
+│ └── processed/  
+│ ├── creditcard_processed.csv  
+│ ├── test_results_with_explanations.csv  
+│ ├── test_results_with_summaries.csv  
 
-├── notebooks/
-│ ├── 01_eda.ipynb
-│ ├── 02_modeling.ipynb
-│ ├── 03_explanation.ipynb
-│ ├── 04_genai_summary.ipynb
+├── notebooks/  
+│ ├── 01_eda.ipynb  
+│ ├── 02_modeling.ipynb  
+│ ├── 03_explanation.ipynb  
+│ ├── 04_genai_summary.ipynb  
 
-├── src/
-│ ├── data_preprocessing.py
-│ ├── fraud_model.py
-│ ├── anomaly_model.py
-│ ├── explanation_engine.py
-│ ├── summary_engine.py
+├── src/  
+│ ├── data_preprocessing.py  
+│ ├── fraud_model.py  
+│ ├── anomaly_model.py  
+│ ├── explanation_engine.py  
+│ ├── summary_engine.py  
 
-├── requirements.txt
-├── README.md
+├── requirements.txt  
+├── README.md  
 
 ---
 
