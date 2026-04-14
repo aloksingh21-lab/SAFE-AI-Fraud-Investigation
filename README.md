@@ -151,7 +151,7 @@ streamlit run app/streamlit_app.py
 ---
 
 ## Author
-Alok Kumar
+Alok Kumar  
 With support from my amazing Prof George Perdrizet and Andrew Thomas (TA)
 
 ---
