@@ -4,6 +4,14 @@ from pathlib import Path
 
 st.set_page_config(page_title="SAFE_AI", layout="wide")
 
+st.markdown("""
+<style>
+div[data-testid="stMarkdownContainer"] p {
+    font-size: 25px;
+}
+</style>
+""", unsafe_allow_html=True)
+
 st.title("SAFE-AI: Suspicious Activity Flagging Engine - AI")
 st.write("AI-assisted fraud investigation system for detecting suspicious transactions, identifying anomalous patterns, and generating investigation summaries.")
 
