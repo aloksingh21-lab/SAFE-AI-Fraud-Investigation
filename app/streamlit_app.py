@@ -72,7 +72,7 @@ st.write(selected_row["recommended_action"])
 
 st.markdown("---")
 
-st.subheader("GPT InvestigationSummary")
+st.subheader("Note to Analyst")
 st.write(selected_row["gpt_summary"])
 
 st.markdown("---")
